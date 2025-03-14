@@ -1,0 +1,124 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   KIDSFILMS
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 50;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+  </style>
+  <script>
+   function openVideo(url) {
+            document.getElementById('videoFrame').src = url;
+            document.getElementById('videoModal').style.display = 'block';
+        }
+
+        function closeVideo() {
+            document.getElementById('videoFrame').src = '';
+            document.getElementById('videoModal').style.display = 'none';
+        }
+  </script>
+ </head>
+ <body class="bg-black text-white">
+  <header class="bg-red-700 p-4 flex items-center justify-between">
+   <h1 class="text-white text-2xl font-bold">
+    KIDSFILMS
+   </h1>
+  </header>
+  <main class="relative">
+   <img alt="Inspector Gadget cartoon character" class="w-full h-96 object-cover" height="1080" src="https://storage.googleapis.com/a1aa/image/KKbGwgTs_mquIjPG5mGzgEJjCP1KU11Wg4S8pgkeZYk.jpg" width="1920"/>
+   <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent p-6">
+    <h2 class="text-3xl font-bold mb-2">
+     A Volta ao Mundo com Inspetor Bugiganga
+    </h2>
+    <p class="text-sm mb-4">
+     (Amazon Digital Editora)
+    </p>
+    <p class="text-sm mb-4">
+     1983 | Estados Unidos | 42 minutos
+    </p>
+    <div class="flex items-center mb-4">
+     <div class="flex text-yellow-400 mr-2">
+      <i class="fas fa-star">
+      </i>
+      <i class="fas fa-star">
+      </i>
+      <i class="fas fa-star">
+      </i>
+      <i class="fas fa-star">
+      </i>
+      <i class="fas fa-star-half-alt">
+      </i>
+     </div>
+     <p class="text-sm">
+      (Adicionar aos favoritos)
+     </p>
+    </div>
+    <p class="text-sm mb-4">
+     Infantil
+    </p>
+    <p class="text-sm mb-4">
+     <i class="fas fa-heart">
+     </i>
+     Não há inadequações
+    </p>
+    <p class="text-sm mb-4">
+     Português | Espanhol
+    </p>
+    <p class="text-sm mb-4">
+     Com o Inspetor Bugiganga pelo mundo e pela história. Conhecendo lugares, origens dos povos, cidades famosas, folclore, pontos turísticos e muita diversão a cada segundo. Nosso engraçado Inspetor com sua sapiência, seus atraentes inventos e seus games-trivia, farão as crianças e adultos jogarem enquanto aprendem e se divertem. Maravilhoso, fantástico! Entretenimento de alto nível.
+    </p>
+    <button class="bg-red-500 text-white font-bold py-2 px-4 rounded" onclick="openVideo('https://vkvideo.ru/video_ext.p')">
+     ASSISTA AGORA
+    </button>
+   </div>
+  </main>
+  <div class="modal" id="videoModal">
+   <div class="modal-content">
+    <span class="close" onclick="closeVideo()">
+     &times;
+    </span>
+    <iframe frameborder="0" height="315" id="videoFrame" src="" width="560" allowfullscreen>
+    </iframe>
+   </div>
+  </div>
+ </body>
+</html>
